@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="50%" stop-color="#047857" />
+      <stop offset="100%" stop-color="#065f46" />
+    </linearGradient>
+
+    <!-- Main Leaf Gradient -->
+    <linearGradient id="leafGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="60%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#a7f3d0" />
+    </linearGradient>
+
+    <!-- Secondary Leaf Gradient -->
+    <linearGradient id="leafGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+
+    <!-- Sun & Sparkle Gradient -->
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Outer Rounded Square / Badge -->
+  <rect x="4" y="4" width="120" height="120" rx="32" fill="url(#bgGrad)" stroke="#10b981" stroke-width="3" />
+  
+  <!-- Subtle Soil Mound Curve -->
+  <path d="M12 96 Q64 86 116 96 L116 112 Q64 122 12 112 Z" fill="#022c22" opacity="0.6" />
+
+  <!-- Golden Sun Accent -->
+  <circle cx="94" cy="34" r="14" fill="url(#sunGrad)" opacity="0.95" filter="url(#glow)" />
+  <circle cx="94" cy="34" r="7" fill="#ffffff" opacity="0.8" />
+
+  <!-- Plant Stem Curve -->
+  <path d="M64 100 C64 80 62 60 64 42" stroke="#6ee7b7" stroke-width="6" stroke-linecap="round" fill="none" />
+
+  <!-- Left Sprouting Leaf -->
+  <path d="M64 74 C42 74 30 56 32 40 C46 40 60 52 64 68 Z" fill="url(#leafGrad2)" />
+
+  <!-- Right Primary Sprouting Leaf -->
+  <path d="M64 64 C66 40 84 22 100 24 C100 42 86 64 64 64 Z" fill="url(#leafGrad)" filter="url(#glow)" />
+  
+  <!-- Center Leaf Vein -->
+  <path d="M64 64 C74 48 88 36 98 28" stroke="#ecfdf5" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.85" />
+
+  <!-- AI Intelligence Sparkles (Precision Agronomy) -->
+  <path d="M36 28 L38 22 L44 20 L38 18 L36 12 L34 18 L28 20 L34 22 Z" fill="#fef08a" />
+  <circle cx="24" cy="34" r="2.5" fill="#fef08a" />
+  <circle cx="76" cy="18" r="2" fill="#6ee7b7" />
+</svg>

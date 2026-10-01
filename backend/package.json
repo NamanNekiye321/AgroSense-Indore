@@ -1,0 +1,19 @@
+{
+  "name": "agrosense-indore",
+  "version": "2.0.0",
+  "description": "Backend API Server for AI-Based Crop Recommendation (SIH25030 - Govt of Jharkhand)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3",
+    "mongoose": "^9.10.3",
+    "mysql2": "^3.9.7"
+  }
+}

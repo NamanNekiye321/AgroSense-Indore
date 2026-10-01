@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroSense Indore - Crop & Fertilizer Recommendation</title>
+  
+  <!-- Modern Typography & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css?v=1.2">
+  <script>
+    try {
+      if (localStorage.getItem('agrosense_theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+        var observer = new MutationObserver(function() {
+          if (document.body) {
+            document.body.classList.add('dark');
+            observer.disconnect();
+          }
+        });
+        observer.observe(document.documentElement, { childList: true });
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <!-- ===================================================================== -->
+  <!-- TOP GOVERNMENT & PROJECT BANNER                                       -->
+  <!-- ===================================================================== -->
+  <div class="gov-topbar">
+    <div class="gov-container">
+      <div class="gov-brand">
+        <span class="gov-badge"><i class="fa-solid fa-landmark"></i> <span data-en="Kisan Kalyan &amp; Krishi Vikas Dept, Govt. of MP" data-hi="किसान कल्याण एवं कृषि विकास विभाग, म.प्र. शासन">Kisan Kalyan &amp; Krishi Vikas Dept, Govt. of MP</span></span>
+        <span class="sih-badge"><i class="fa-solid fa-seedling"></i> <span data-en="Minor Project • Malwa Plateau (Zone X)" data-hi="माइनर प्रोजेक्ट • मालवा पठार (जोन X)">Minor Project &bull; Malwa Plateau (Zone X)</span></span>
+      </div>
+      <div class="top-controls">
+        <button id="theme-btn" class="top-btn" onclick="toggleDarkMode()" title="Toggle Dark / Light Mode">
+          <i class="fa-solid fa-moon"></i> <span id="theme-label">Dark Mode</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MAIN NAVIGATION HEADER                                                -->
+  <!-- ===================================================================== -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo-group">
+        <div class="logo-icon-wrap">
+          <i class="fa-solid fa-seedling"></i>
+        </div>
+        <div class="logo-text">
+          <h1>AgroSense <span>Indore</span></h1>
+          <p class="tagline" data-en="AI-Powered Precision Agronomic Engine for Indore &amp; Malwa" data-hi="इंदौर एवं मालवा के लिए एआई-सटीक कृषि अनुशंसा प्रणाली">AI-Powered Precision Agronomic Engine for Indore &amp; Malwa</p>
+        </div>
+      </div>
+
+      <!-- Hamburger (mobile only) -->
+      <button class="hamburger" id="hamburger-btn" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="main-nav">
+        <a href="#advisor" class="nav-link active" onclick="handleNavClick(this)"><i class="fa-solid fa-wand-magic-sparkles"></i> <span>Crop Advisor</span></a>
+        <a href="#advisor" class="nav-link" onclick="handleNavClick(this); setTimeout(scrollToFertilizer, 400);"><i class="fa-solid fa-flask-vial"></i> <span>Fertilizer Plan</span></a>
+        <a href="#atlas-section" class="nav-link" onclick="handleNavClick(this)"><i class="fa-solid fa-map-location-dot"></i> <span>Indore Region</span></a>
+        <a href="#history-section" class="nav-link" onclick="handleNavClick(this)"><i class="fa-solid fa-clock-rotate-left"></i> <span>History &amp; Database</span></a>
+      </nav>
+      <!-- Mobile nav overlay -->
+      <div class="nav-overlay" id="nav-overlay" onclick="toggleMobileNav()"></div>
+    </div>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- HERO BANNER & ML ARCHITECTURE                                         -->
+  <!-- ===================================================================== -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <span class="hero-chip" data-en="🌾 Smart Agriculture &amp; Precision Agronomy" data-hi="🌾 स्मार्ट कृषि एवं सटीक तकनीक">🌾 Smart Agriculture &amp; Precision Agronomy</span>
+      <h2 data-en="Tailored Crop Intelligence for Indore &amp; Malwa's Black Soils" data-hi="इंदौर एवं मालवा की काली मिट्टी के लिए सटीक फसल परामर्श">
+        Tailored Crop Intelligence for <span class="highlight-text">Indore &amp; Malwa's</span> Black Soils
+      </h2>
+      <p data-en="Leverage Scikit-Learn Machine Learning &amp; verified ICAR-IISR Indore agronomic standards for Malwa's Vertisols to optimize yield, soil health, and farm profitability." data-hi="आईसीएआर-आईआईएसआर इंदौर एवं मशीन लर्निंग द्वारा मालवा की काली मिट्टी के अनुकूल फसलों एवं उर्वरकों की सटीक वैज्ञानिक अनुशंसा प्राप्त करें।">
+        Leverage Scikit-Learn Machine Learning &amp; verified ICAR-IISR Indore agronomic standards for Malwa's Vertisols to optimize yield, soil health, and farm profitability.
+      </p>
+
+      <!-- 5 Hero Stat Cards -->
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-num stat-amber">Indore</div>
+          <div class="stat-lbl" data-en="1 District &amp; Tehsils" data-hi="1 जिला एवं 5 तहसीलें">1 District &amp; Tehsils</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num stat-slate">99.0%</div>
+          <div class="stat-lbl" data-en="Model Accuracy" data-hi="मॉडल सटीकता">Model Accuracy</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num stat-amber">6 Crops</div>
+          <div class="stat-lbl" data-en="Indore Core Crops" data-hi="इंदौर की मुख्य फसलें">Indore Core Crops</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num stat-purple">MongoDB</div>
+          <div class="stat-lbl" data-en="NoSQL Document Store" data-hi="मोंगोडीबी डेटाबेस">NoSQL Document Store</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num stat-emerald">Random Forest</div>
+          <div class="stat-lbl" data-en="ML Classifier Model" data-hi="मशीन लर्निंग मॉडल">ML Classifier Model</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO COLUMN WORKSPACE (CARDS ONLY) -->
+  <main class="two-col-layout" id="advisor">
+
+    <!-- LEFT CARD: Input Form & Soil Parameters -->
+    <section class="card left-card">
+      <div class="card-header">
+        <div class="card-header-icon">
+          <i class="fa-solid fa-sliders"></i>
+        </div>
+        <div>
+          <h2>Soil &amp; Climate Parameters</h2>
+          <p class="card-subtitle">Enter soil test card data or auto-load regional baselines</p>
+        </div>
+      </div>
+
+      <form id="crop-form" onsubmit="handleFormSubmit(event)">
+
+        <!-- Row 1: Tehsil + Farmer Name -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="tehsil"><i class="fa-solid fa-map-pin text-indigo"></i> Select Tehsil (Indore)</label>
+            <select id="tehsil" onchange="handleTehsilChange()">
+              <option value="Sanwer" selected>Sanwer — Deep Black Cotton</option>
+              <option value="Indore">Indore (Central) — Medium Deep Black</option>
+              <option value="Depalpur">Depalpur — Heavy Black Clay</option>
+              <option value="Mhow">Mhow (Ambedkar Nagar) — Loamy Black</option>
+              <option value="Hatod">Hatod — Shallow to Medium Black</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="farmer-name"><i class="fa-solid fa-user text-indigo"></i> Farmer Name</label>
+            <input type="text" id="farmer-name" placeholder="Rameshwar Patel" required>
+          </div>
+        </div>
+
+        <!-- Row 2: Village + Land Area + Phone -->
+        <div class="form-row form-row-3">
+          <div class="form-group">
+            <label for="village"><i class="fa-solid fa-house text-indigo"></i> Village / Area</label>
+            <input type="text" id="village" placeholder="e.g. Limbodiya, Sanwer">
+          </div>
+          <div class="form-group">
+            <label for="land-area"><i class="fa-solid fa-ruler-combined text-indigo"></i> Land Area (Acres)</label>
+            <input type="number" id="land-area" min="0.1" max="100" step="0.1" value="2.5">
+          </div>
+          <div class="form-group">
+            <label for="phone"><i class="fa-solid fa-phone text-indigo"></i> Phone (Optional)</label>
+            <input type="tel" id="phone" placeholder="e.g. 98XXXXXXXX">
+          </div>
+        </div>
+
+        <!-- Zone Info Strip (Sample style dashed box) -->
+        <div class="zone-strip" id="zone-bar">
+          <div class="zone-strip-row">
+            <span class="info-tag"><i class="fa-solid fa-layer-group"></i> Zone: <b id="zone-name">Malwa Plateau (Zone X)</b></span>
+            <span class="info-tag"><i class="fa-solid fa-mountain"></i> Soil: <b id="zone-soil">Deep Black Cotton Soil</b></span>
+          </div>
+          <div class="zone-strip-row">
+            <span class="info-tag"><i class="fa-solid fa-cloud-showers-heavy"></i> Rain: <b id="zone-rain">890 mm</b></span>
+          </div>
+        </div>
+
+        <!-- Quick Soil Presets -->
+        <div class="preset-strip">
+          <span class="preset-label">Quick Preset:</span>
+          <button type="button" class="preset-btn" onclick="applyPreset('black_cotton')">Malwa Black Cotton</button>
+          <button type="button" class="preset-btn" onclick="applyPreset('deep_black')">Deep Black Soil</button>
+          <button type="button" class="preset-btn" onclick="applyPreset('loamy_black')">Loamy Black Soil</button>
+        </div>
+
+        <!-- N, P, K, pH Nutrients 2x2 Grid -->
+        <div class="nutrients-grid">
+          <!-- Nitrogen -->
+          <div class="nutrient-box">
+            <div class="nutrient-head">
+              <span class="nutrient-name">Nitrogen (N)</span>
+              <span class="nutrient-val"><span id="n-val">45</span> <small>kg/ha</small></span>
+            </div>
+            <input type="range" class="soil-slider" id="soil-n" min="0" max="200" value="45" oninput="updateSlider('n')">
+            <span class="nutrient-status optimal" id="n-hint">Optimal (40–110)</span>
+          </div>
+
+          <!-- Phosphorus -->
+          <div class="nutrient-box">
+            <div class="nutrient-head">
+              <span class="nutrient-name">Phosphorus (P)</span>
+              <span class="nutrient-val"><span id="p-val">50</span> <small>kg/ha</small></span>
+            </div>
+            <input type="range" class="soil-slider" id="soil-p" min="0" max="150" value="50" oninput="updateSlider('p')">
+            <span class="nutrient-status optimal" id="p-hint">Optimal (40–80)</span>
+          </div>
+
+          <!-- Potassium -->
+          <div class="nutrient-box">
+            <div class="nutrient-head">
+              <span class="nutrient-name">Potassium (K)</span>
+              <span class="nutrient-val"><span id="k-val">40</span> <small>kg/ha</small></span>
+            </div>
+            <input type="range" class="soil-slider" id="soil-k" min="0" max="150" value="40" oninput="updateSlider('k')">
+            <span class="nutrient-status optimal" id="k-hint">Optimal (25–70)</span>
+          </div>
+
+          <!-- Soil pH -->
+          <div class="nutrient-box">
+            <div class="nutrient-head">
+              <span class="nutrient-name">Soil pH Level</span>
+              <span class="nutrient-val"><span id="ph-val">7.6</span> <small>pH</small></span>
+            </div>
+            <input type="range" class="soil-slider ph-slider" id="soil-ph" min="4.0" max="10.0" step="0.1" value="7.6" oninput="updateSlider('ph')">
+            <span class="nutrient-status warn" id="ph-hint">Mildly Alkaline (Typical Malwa Black Soil)</span>
+          </div>
+        </div>
+
+        <!-- Climate Conditions 3-column Grid -->
+        <div class="env-grid">
+          <div class="form-group">
+            <label for="temperature"><i class="fa-solid fa-temperature-half text-indigo"></i> Temperature (°C)</label>
+            <input type="number" id="temperature" min="5" max="50" step="0.5" value="27" required>
+          </div>
+          <div class="form-group">
+            <label for="humidity"><i class="fa-solid fa-droplet text-indigo"></i> Humidity (%)</label>
+            <input type="number" id="humidity" min="10" max="100" value="68" required>
+          </div>
+          <div class="form-group">
+            <label for="rainfall"><i class="fa-solid fa-cloud-rain text-indigo"></i> Rainfall (mm)</label>
+            <input type="number" id="rainfall" min="100" max="2500" value="890" required>
+          </div>
+        </div>
+
+        <!-- Big Tactile Predict Button -->
+        <button type="submit" id="submit-btn" class="btn-predict">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span>Generate AI Crop Recommendation</span>
+        </button>
+      </form>
+    </section>
+
+    <!-- RIGHT CARD: Prediction Results -->
+    <section class="card right-card" id="results-card">
+
+      <!-- Top Status Header Bar -->
+      <div class="results-header-bar">
+        <div>
+          <span class="ai-badge"><i class="fa-solid fa-robot"></i> <span id="model-tag">Scikit-Learn ML</span></span>
+          <span class="sih-tag">AgroSense Indore</span>
+        </div>
+        <span class="res-timestamp" id="res-timestamp">Active Session</span>
+      </div>
+
+      <!-- Awaiting Placeholder State -->
+      <div id="placeholder-state" class="empty-results">
+        <div class="empty-icon">
+          <i class="fa-solid fa-wheat-awn-circle-exclamation"></i>
+        </div>
+        <h4>Awaiting Soil &amp; Tehsil Parameters</h4>
+        <p>Select your Indore tehsil, adjust soil nutrient levels, and click <b>Generate AI Crop Recommendation</b> to view tailored crop and fertilizer plans.</p>
+      </div>
+
+      <!-- Populated Results Container -->
+      <div id="result-state" style="display: none;">
+
+        <!-- Primary Hero Recommendation Card -->
+        <div class="hero-crop-card">
+          <div class="crop-top">
+            <div class="crop-badge-main">
+              <div class="crop-icon-box" id="hero-crop-icon">
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+              <div>
+                <div class="rec-tag">TOP RECOMMENDATION #1</div>
+                <h2 class="crop-title" id="res-crop-name">Soybean</h2>
+                <p class="crop-subtitle" id="res-crop-meta">सोयाबीन (Kharif Season)</p>
+              </div>
+            </div>
+
+            <!-- Radial Confidence Score Ring -->
+            <div class="confidence-ring">
+              <div class="conf-value" id="res-confidence-pill">94.2%</div>
+              <div class="conf-label">SUITABILITY<br>SCORE</div>
+            </div>
+          </div>
+
+          <!-- Key Agronomic Attributes Strip -->
+          <div class="crop-specs-grid">
+            <div class="spec-item">
+              <i class="fa-solid fa-hourglass-half"></i>
+              <div>
+                <span class="spec-label">Duration</span>
+                <b id="stat-duration">95–105 Days</b>
+              </div>
+            </div>
+            <div class="spec-item">
+              <i class="fa-solid fa-sun-plant-wilt"></i>
+              <div>
+                <span class="spec-label">Season</span>
+                <b id="stat-season">Kharif / Rabi</b>
+              </div>
+            </div>
+            <div class="spec-item">
+              <i class="fa-solid fa-indian-rupee-sign"></i>
+              <div>
+                <span class="spec-label">Govt MSP</span>
+                <b id="stat-msp">₹4,892 / Q</b>
+              </div>
+            </div>
+            <div class="spec-item">
+              <i class="fa-solid fa-faucet-drip"></i>
+              <div>
+                <span class="spec-label">Water Req.</span>
+                <b id="stat-water">Moderate</b>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alternative Crops Section -->
+        <h4 class="section-mini-heading">Alternative Crop Options</h4>
+        <div class="alt-crops-grid">
+          <div class="alt-crop-card">
+            <div class="alt-rank">#2</div>
+            <div class="alt-info">
+              <h5 id="alt-1-name">Wheat</h5>
+              <span class="alt-conf" id="alt-1-suit">Suitability: 18.5%</span>
+            </div>
+            <i class="fa-solid fa-chevron-right alt-arrow"></i>
+          </div>
+
+          <div class="alt-crop-card">
+            <div class="alt-rank">#3</div>
+            <div class="alt-info">
+              <h5 id="alt-2-name">Potato</h5>
+              <span class="alt-conf" id="alt-2-suit">Suitability: 12.0%</span>
+            </div>
+            <i class="fa-solid fa-chevron-right alt-arrow"></i>
+          </div>
+        </div>
+
+        <!-- Precision Fertilizer Advisory Section -->
+        <div class="fertilizer-prescription">
+          <div class="fert-head">
+            <i class="fa-solid fa-prescription-bottle-medical"></i>
+            <div>
+              <h4>Precision Fertilizer Advisory</h4>
+              <p>Dosage calculated based on soil nutrient deficit for 1 Acre</p>
+            </div>
+          </div>
+
+          <div class="fert-dosage-grid">
+            <div class="fert-dose-box urea">
+              <span class="fert-name">Urea (46% N)</span>
+              <span class="fert-amount"><span id="res-urea">15</span> <small>kg/acre</small></span>
+              <span class="fert-timing">Split: 50% Basal + 50% Top</span>
+            </div>
+
+            <div class="fert-dose-box dap">
+              <span class="fert-name">DAP (18:46:0)</span>
+              <span class="fert-amount"><span id="res-dap">10</span> <small>kg/acre</small></span>
+              <span class="fert-timing">100% Basal at Sowing</span>
+            </div>
+
+            <div class="fert-dose-box mop">
+              <span class="fert-name">MOP (60% K)</span>
+              <span class="fert-amount"><span id="res-mop">10</span> <small>kg/acre</small></span>
+              <span class="fert-timing">Basal Dose</span>
+            </div>
+
+            <div class="fert-dose-box organic">
+              <span class="fert-name">Organic Compost</span>
+              <span class="fert-amount">2.0 <small>ton/acre</small></span>
+              <span class="fert-timing">Soil Incorporation</span>
+            </div>
+          </div>
+
+          <div class="fert-remarks-box">
+            <p id="res-remarks"><i class="fa-solid fa-lightbulb"></i> Apply DAP as basal dose at sowing. Split Urea into 2 doses — 50% at sowing, 50% at tillering.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- REGIONAL AGRO-CLIMATIC ATLAS SECTION -->
+  <section class="atlas-section" id="atlas-section">
+    <div class="atlas-header">
+      <span class="atlas-eyebrow">REGIONAL AGRO-CLIMATIC ATLAS</span>
+      <h2 class="atlas-title">Indore District &amp; Tehsils <span>(Malwa Plateau – Zone X)</span></h2>
+      <p class="atlas-desc">Click any tehsil card to auto-load its soil &amp; climate baselines into the advisor above.</p>
+    </div>
+
+    <div class="atlas-grid">
+
+      <!-- Indore Central -->
+      <div class="atlas-card" data-tehsil="Indore" onclick="loadTehsilFromAtlas('Indore')">
+        <div class="atlas-card-icon"><i class="fa-solid fa-map-pin"></i></div>
+        <div class="atlas-card-top">
+          <h3>Indore <span class="atlas-sub">(Central)</span></h3>
+          <span class="zone-badge">Zone X</span>
+        </div>
+        <p class="atlas-soil">Soil: <strong>Medium Deep Black Cotton Soil</strong></p>
+        <div class="atlas-meta">
+          <span><i class="fa-solid fa-cloud-showers-heavy"></i> Rainfall: <b>920 mm</b></span>
+          <span><i class="fa-solid fa-flask"></i> pH: <b>7.4</b></span>
+        </div>
+        <div class="atlas-cta"><i class="fa-solid fa-arrow-up-right-dots"></i> Load Baseline</div>
+      </div>
+
+      <!-- Sanwer -->
+      <div class="atlas-card" data-tehsil="Sanwer" onclick="loadTehsilFromAtlas('Sanwer')">
+        <div class="atlas-card-icon"><i class="fa-solid fa-map-pin"></i></div>
+        <div class="atlas-card-top">
+          <h3>Sanwer</h3>
+          <span class="zone-badge">Zone X</span>
+        </div>
+        <p class="atlas-soil">Soil: <strong>Deep Black Cotton Soil</strong></p>
+        <div class="atlas-meta">
+          <span><i class="fa-solid fa-cloud-showers-heavy"></i> Rainfall: <b>890 mm</b></span>
+          <span><i class="fa-solid fa-flask"></i> pH: <b>7.6</b></span>
+        </div>
+        <div class="atlas-cta"><i class="fa-solid fa-arrow-up-right-dots"></i> Load Baseline</div>
+      </div>
+
+      <!-- Depalpur -->
+      <div class="atlas-card" data-tehsil="Depalpur" onclick="loadTehsilFromAtlas('Depalpur')">
+        <div class="atlas-card-icon"><i class="fa-solid fa-map-pin"></i></div>
+        <div class="atlas-card-top">
+          <h3>Depalpur</h3>
+          <span class="zone-badge">Zone X</span>
+        </div>
+        <p class="atlas-soil">Soil: <strong>Clayey Heavy Black Soil</strong></p>
+        <div class="atlas-meta">
+          <span><i class="fa-solid fa-cloud-showers-heavy"></i> Rainfall: <b>860 mm</b></span>
+          <span><i class="fa-solid fa-flask"></i> pH: <b>7.5</b></span>
+        </div>
+        <div class="atlas-cta"><i class="fa-solid fa-arrow-up-right-dots"></i> Load Baseline</div>
+      </div>
+
+      <!-- Mhow -->
+      <div class="atlas-card" data-tehsil="Mhow" onclick="loadTehsilFromAtlas('Mhow')">
+        <div class="atlas-card-icon"><i class="fa-solid fa-map-pin"></i></div>
+        <div class="atlas-card-top">
+          <h3>Mhow <span class="atlas-sub">(Dr. Ambedkar Nagar)</span></h3>
+          <span class="zone-badge">Zone X</span>
+        </div>
+        <p class="atlas-soil">Soil: <strong>Black Loamy Plateau Soil</strong></p>
+        <div class="atlas-meta">
+          <span><i class="fa-solid fa-cloud-showers-heavy"></i> Rainfall: <b>950 mm</b></span>
+          <span><i class="fa-solid fa-flask"></i> pH: <b>7.2</b></span>
+        </div>
+        <div class="atlas-cta"><i class="fa-solid fa-arrow-up-right-dots"></i> Load Baseline</div>
+      </div>
+
+      <!-- Hatod -->
+      <div class="atlas-card" data-tehsil="Hatod" onclick="loadTehsilFromAtlas('Hatod')">
+        <div class="atlas-card-icon"><i class="fa-solid fa-map-pin"></i></div>
+        <div class="atlas-card-top">
+          <h3>Hatod</h3>
+          <span class="zone-badge">Zone X</span>
+        </div>
+        <p class="atlas-soil">Soil: <strong>Shallow to Medium Black Soil</strong></p>
+        <div class="atlas-meta">
+          <span><i class="fa-solid fa-cloud-showers-heavy"></i> Rainfall: <b>875 mm</b></span>
+          <span><i class="fa-solid fa-flask"></i> pH: <b>7.5</b></span>
+        </div>
+        <div class="atlas-cta"><i class="fa-solid fa-arrow-up-right-dots"></i> Load Baseline</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- MONGODB LIVE LEDGER & CONSULTATION AUDIT LOG                          -->
+  <!-- ===================================================================== -->
+  <section class="ledger-section" id="history-section">
+    <div class="ledger-header">
+      <span class="ledger-eyebrow"><i class="fa-solid fa-database"></i> MONGODB NOSQL LIVE LEDGER</span>
+      <h2 class="ledger-title">Recent Farmer Consultations &amp; Soil Logs</h2>
+      <p class="ledger-subtitle">
+        Real-time agronomic audit records retrieved from MongoDB <code>agrosense_indore_db</code> collection via Mongoose ODM.
+      </p>
+    </div>
+
+    <div class="table-card">
+      <div class="table-toolbar">
+        <div class="toolbar-left">
+          <span class="live-stream-badge"><span class="pulse-dot"></span> Live Ingestion Stream</span>
+          <span class="toolbar-db-badge"><i class="fa-solid fa-database"></i> <code>collection: consultations_audit</code></span>
+        </div>
+        <div class="toolbar-right">
+          <span class="toolbar-hint"><i class="fa-solid fa-arrow-pointer"></i> Click row to load consultation into advisor</span>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="data-table" id="history-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Farmer / Village</th>
+              <th>Tehsil</th>
+              <th>Soil Profile (N-P-K-pH)</th>
+              <th>Recommended Crop</th>
+              <th>Confidence</th>
+              <th>Timestamp</th>
+            </tr>
+          </thead>
+          <tbody id="history-table-body">
+            <!-- Populated dynamically via JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- FOOTER                                                                -->
+  <!-- ===================================================================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <i class="fa-solid fa-leaf text-accent"></i>
+          <h3>AgroSense Indore</h3>
+        </div>
+        <p class="footer-tagline">AI Precision Agronomic Advisory System &bull; Indore District, Malwa Plateau (Zone X)</p>
+        <p class="footer-desc">Empowering Malwa farmers with calibrated machine learning crop advisories, customized NPK remediation, and micro-climatic zoning.</p>
+        <p class="footer-source">
+          <i class="fa-solid fa-landmark"></i> <b>Agronomic Data:</b> ICAR-IISR Indore &bull; RVSKVV &bull; Dept. of Agriculture, Madhya Pradesh
+        </p>
+      </div>
+
+      <div class="footer-modules">
+        <h4>System Modules</h4>
+        <p><i class="fa-solid fa-wand-magic-sparkles text-accent"></i> AI Precision Crop Advisory</p>
+        <p><i class="fa-solid fa-flask-vial text-accent"></i> Soil Health &amp; NPK Dosage Remediation</p>
+        <p><i class="fa-solid fa-map-location-dot text-accent"></i> Indore Tehsil Micro-Climatic Atlas</p>
+        <p><i class="fa-solid fa-database text-accent"></i> MongoDB Real-time Consultation Ledger</p>
+      </div>
+
+      <div class="footer-meta">
+        <h4>Project Information</h4>
+        <p><b>Minor Project 2025–2026</b></p>
+        <p>Department of Computer Science &amp; Engineering</p>
+        <p class="footer-stack-badge">
+          <span class="pulse-dot"></span> Full-Stack ML + Express + MongoDB
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <span>&copy; 2025–2026 AgroSense Indore. AI Precision Agronomic Platform.</span>
+        <span>Malwa Agro-Climatic Intelligence &bull; Zone X</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
