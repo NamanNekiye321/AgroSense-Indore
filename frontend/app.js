@@ -213,71 +213,59 @@ function updateSlider(type) {
   el.style.background = `linear-gradient(to right, ${color} ${pct}%, #e2e8f0 ${pct}%)`;
 }
 
-// ---- REGIONAL TEHSIL BASELINES (INDORE & MALWA) ----
+// ---- REGIONAL TEHSIL BASELINES (INDORE & MALWA) — Kharif & Rabi Seasonal ----
 const TEHSIL_DATA = {
   'Sanwer': {
     zone: 'Malwa Plateau (Zone X)',
     soil: 'Deep Black Cotton Soil',
-    rain: 890,
-    temp: 27,
-    humidity: 68,
-    n: 45,
-    p: 50,
-    k: 40,
-    ph: 7.6
+    ph: 7.6,
+    n: 45, p: 50, k: 40,
+    Kharif: { rain: 890, temp: 27, humidity: 78 },
+    Rabi:   { rain: 42,  temp: 19, humidity: 48 }
   },
   'Indore': {
     zone: 'Malwa Plateau (Zone X)',
     soil: 'Medium Deep Black Cotton Soil',
-    rain: 920,
-    temp: 28,
-    humidity: 72,
-    n: 55,
-    p: 58,
-    k: 45,
-    ph: 7.4
+    ph: 7.4,
+    n: 55, p: 58, k: 45,
+    Kharif: { rain: 920, temp: 28, humidity: 80 },
+    Rabi:   { rain: 45,  temp: 20, humidity: 50 }
   },
   'Depalpur': {
     zone: 'Malwa Plateau (Zone X)',
     soil: 'Heavy Vertisol Clay Soil',
-    rain: 860,
-    temp: 28,
-    humidity: 65,
-    n: 40,
-    p: 48,
-    k: 38,
-    ph: 7.5
+    ph: 7.5,
+    n: 40, p: 48, k: 38,
+    Kharif: { rain: 860, temp: 28, humidity: 76 },
+    Rabi:   { rain: 38,  temp: 20, humidity: 47 }
   },
   'Mhow': {
     zone: 'Malwa Plateau (Zone X)',
     soil: 'Loamy Black & Undulating Soil',
-    rain: 950,
-    temp: 25,
-    humidity: 75,
-    n: 60,
-    p: 54,
-    k: 50,
-    ph: 7.2
+    ph: 7.2,
+    n: 60, p: 54, k: 50,
+    Kharif: { rain: 950, temp: 25, humidity: 82 },
+    Rabi:   { rain: 48,  temp: 18, humidity: 52 }
   },
   'Hatod': {
     zone: 'Malwa Plateau (Zone X)',
     soil: 'Shallow to Medium Black Soil',
-    rain: 875,
-    temp: 28,
-    humidity: 67,
-    n: 42,
-    p: 46,
-    k: 40,
-    ph: 7.5
+    ph: 7.5,
+    n: 42, p: 46, k: 40,
+    Kharif: { rain: 875, temp: 28, humidity: 77 },
+    Rabi:   { rain: 40,  temp: 20, humidity: 48 }
   }
 };
 
 function handleTehsilChange() {
-  const tehsilEl = document.getElementById('tehsil');
+  const tehsilEl  = document.getElementById('tehsil');
+  const seasonEl  = document.getElementById('season-select');
   if (!tehsilEl) return;
 
   const selected = tehsilEl.value;
-  const data = TEHSIL_DATA[selected] || TEHSIL_DATA['Sanwer'];
+  const season   = seasonEl ? seasonEl.value : 'Kharif';
+  const data     = TEHSIL_DATA[selected] || TEHSIL_DATA['Sanwer'];
+  const climate  = data[season] || data['Kharif'];
 
   // 1. Update Zone Bar Badges
   const soilBadge = document.getElementById('zone-soil');
@@ -285,31 +273,32 @@ function handleTehsilChange() {
   const zoneBadge = document.getElementById('zone-name');
 
   if (soilBadge) soilBadge.textContent = data.soil;
-  if (rainBadge) rainBadge.textContent = `${data.rain} mm`;
+  if (rainBadge) rainBadge.textContent = `${climate.rain} mm (${season})`;
   if (zoneBadge) zoneBadge.textContent = data.zone;
 
   // 2. Update Climate Inputs
-  const rainInput = document.getElementById('rainfall');
-  const tempInput = document.getElementById('temperature');
+  const rainInput  = document.getElementById('rainfall');
+  const tempInput  = document.getElementById('temperature');
   const humidInput = document.getElementById('humidity');
-  if (rainInput) rainInput.value = data.rain;
-  if (tempInput) tempInput.value = data.temp;
-  if (humidInput) humidInput.value = data.humidity;
+  if (rainInput)  rainInput.value  = climate.rain;
+  if (tempInput)  tempInput.value  = climate.temp;
+  if (humidInput) humidInput.value = climate.humidity;
 
   // 3. Auto-load regional baseline soil values into sliders
-  const soilN = document.getElementById('soil-n');
-  const soilP = document.getElementById('soil-p');
-  const soilK = document.getElementById('soil-k');
+  const soilN  = document.getElementById('soil-n');
+  const soilP  = document.getElementById('soil-p');
+  const soilK  = document.getElementById('soil-k');
   const soilPh = document.getElementById('soil-ph');
 
-  if (soilN) soilN.value = data.n;
-  if (soilP) soilP.value = data.p;
-  if (soilK) soilK.value = data.k;
+  if (soilN)  soilN.value  = data.n;
+  if (soilP)  soilP.value  = data.p;
+  if (soilK)  soilK.value  = data.k;
   if (soilPh) soilPh.value = data.ph;
 
   // Refresh all slider labels and track fills
   ['n', 'p', 'k', 'ph'].forEach(updateSlider);
 }
+
 
 // Quick presets handler for verified Indore/Malwa soil types
 function applyPreset(presetKey) {

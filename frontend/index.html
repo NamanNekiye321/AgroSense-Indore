@@ -138,8 +138,8 @@
 
       <form id="crop-form" onsubmit="handleFormSubmit(event)">
 
-        <!-- Row 1: Tehsil + Farmer Name -->
-        <div class="form-row">
+        <!-- Row 1: Tehsil + Season + Farmer Name -->
+        <div class="form-row form-row-3">
           <div class="form-group">
             <label for="tehsil"><i class="fa-solid fa-map-pin text-indigo"></i> <span data-en="Select Tehsil (Indore)" data-hi="तहसील चुनें (इंदौर)">Select Tehsil (Indore)</span></label>
             <select id="tehsil" onchange="handleTehsilChange()">
@@ -148,6 +148,13 @@
               <option value="Depalpur">Depalpur — Heavy Black Clay</option>
               <option value="Mhow">Mhow (Ambedkar Nagar) — Loamy Black</option>
               <option value="Hatod">Hatod — Shallow to Medium Black</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="season-select"><i class="fa-solid fa-sun text-indigo"></i> <span data-en="Crop Season" data-hi="फसल मौसम">Crop Season</span></label>
+            <select id="season-select" onchange="handleTehsilChange()" style="border: 2px solid #6366f1; font-weight:600;">
+              <option value="Kharif">🌧️ Kharif (Jun–Oct) — Monsoon</option>
+              <option value="Rabi">❄️ Rabi (Oct–Mar) — Winter</option>
             </select>
           </div>
           <div class="form-group">
@@ -416,6 +423,7 @@
       <p class="atlas-desc">Click any tehsil card to auto-load its soil &amp; climate baselines into the advisor above.</p>
     </div>
 
+
     <div class="atlas-grid">
 
       <!-- Indore Central -->
@@ -427,7 +435,8 @@
         </div>
         <p class="atlas-soil">Soil: <strong>Medium Deep Black Cotton Soil</strong></p>
         <div class="atlas-meta">
-          <span><i class="fa-solid fa-cloud-showers-heavy"></i> Rainfall: <b>920 mm</b></span>
+          <span><i class="fa-solid fa-cloud-showers-heavy"></i> Kharif: <b>920 mm</b></span>
+          <span><i class="fa-solid fa-snowflake"></i> Rabi: <b>45 mm</b></span>
           <span><i class="fa-solid fa-flask"></i> pH: <b>7.4</b></span>
         </div>
         <div class="atlas-cta"><i class="fa-solid fa-arrow-up-right-dots"></i> Load Baseline</div>
@@ -442,7 +451,8 @@
         </div>
         <p class="atlas-soil">Soil: <strong>Deep Black Cotton Soil</strong></p>
         <div class="atlas-meta">
-          <span><i class="fa-solid fa-cloud-showers-heavy"></i> Rainfall: <b>890 mm</b></span>
+          <span><i class="fa-solid fa-cloud-showers-heavy"></i> Kharif: <b>890 mm</b></span>
+          <span><i class="fa-solid fa-snowflake"></i> Rabi: <b>42 mm</b></span>
           <span><i class="fa-solid fa-flask"></i> pH: <b>7.6</b></span>
         </div>
         <div class="atlas-cta"><i class="fa-solid fa-arrow-up-right-dots"></i> Load Baseline</div>
@@ -457,7 +467,8 @@
         </div>
         <p class="atlas-soil">Soil: <strong>Clayey Heavy Black Soil</strong></p>
         <div class="atlas-meta">
-          <span><i class="fa-solid fa-cloud-showers-heavy"></i> Rainfall: <b>860 mm</b></span>
+          <span><i class="fa-solid fa-cloud-showers-heavy"></i> Kharif: <b>860 mm</b></span>
+          <span><i class="fa-solid fa-snowflake"></i> Rabi: <b>38 mm</b></span>
           <span><i class="fa-solid fa-flask"></i> pH: <b>7.5</b></span>
         </div>
         <div class="atlas-cta"><i class="fa-solid fa-arrow-up-right-dots"></i> Load Baseline</div>
@@ -472,7 +483,8 @@
         </div>
         <p class="atlas-soil">Soil: <strong>Black Loamy Plateau Soil</strong></p>
         <div class="atlas-meta">
-          <span><i class="fa-solid fa-cloud-showers-heavy"></i> Rainfall: <b>950 mm</b></span>
+          <span><i class="fa-solid fa-cloud-showers-heavy"></i> Kharif: <b>950 mm</b></span>
+          <span><i class="fa-solid fa-snowflake"></i> Rabi: <b>48 mm</b></span>
           <span><i class="fa-solid fa-flask"></i> pH: <b>7.2</b></span>
         </div>
         <div class="atlas-cta"><i class="fa-solid fa-arrow-up-right-dots"></i> Load Baseline</div>
@@ -487,11 +499,13 @@
         </div>
         <p class="atlas-soil">Soil: <strong>Shallow to Medium Black Soil</strong></p>
         <div class="atlas-meta">
-          <span><i class="fa-solid fa-cloud-showers-heavy"></i> Rainfall: <b>875 mm</b></span>
+          <span><i class="fa-solid fa-cloud-showers-heavy"></i> Kharif: <b>875 mm</b></span>
+          <span><i class="fa-solid fa-snowflake"></i> Rabi: <b>40 mm</b></span>
           <span><i class="fa-solid fa-flask"></i> pH: <b>7.5</b></span>
         </div>
         <div class="atlas-cta"><i class="fa-solid fa-arrow-up-right-dots"></i> Load Baseline</div>
       </div>
+
 
     </div>
   </section>
