@@ -138,8 +138,8 @@
 
       <form id="crop-form" onsubmit="handleFormSubmit(event)">
 
-        <!-- Row 1: Tehsil + Season + Farmer Name -->
-        <div class="form-row form-row-3">
+        <!-- Row 1: Tehsil + Farmer Name -->
+        <div class="form-row">
           <div class="form-group">
             <label for="tehsil"><i class="fa-solid fa-map-pin text-indigo"></i> <span data-en="Select Tehsil (Indore)" data-hi="तहसील चुनें (इंदौर)">Select Tehsil (Indore)</span></label>
             <select id="tehsil" onchange="handleTehsilChange()">
@@ -148,13 +148,6 @@
               <option value="Depalpur">Depalpur — Heavy Black Clay</option>
               <option value="Mhow">Mhow (Ambedkar Nagar) — Loamy Black</option>
               <option value="Hatod">Hatod — Shallow to Medium Black</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="season-select"><i class="fa-solid fa-sun text-indigo"></i> <span data-en="Crop Season" data-hi="फसल मौसम">Crop Season</span></label>
-            <select id="season-select" onchange="handleTehsilChange()" style="border: 2px solid #6366f1; font-weight:600;">
-              <option value="Kharif">🌧️ Kharif (Jun–Oct) — Monsoon</option>
-              <option value="Rabi">❄️ Rabi (Oct–Mar) — Winter</option>
             </select>
           </div>
           <div class="form-group">
@@ -187,6 +180,10 @@
           </div>
           <div class="zone-strip-row">
             <span class="info-tag"><i class="fa-solid fa-cloud-showers-heavy"></i> <span data-en="Rain:" data-hi="औसत वर्षा:">Rain:</span> <b id="zone-rain">890 mm</b></span>
+            <select id="season-select" onchange="handleTehsilChange()" title="Switch crop season" style="background:transparent;border:none;font-size:10px;color:#aaa;opacity:0.45;cursor:pointer;outline:none;padding:0 2px;margin-left:6px;">
+              <option value="Kharif">Kharif</option>
+              <option value="Rabi">Rabi</option>
+            </select>
           </div>
         </div>
 
