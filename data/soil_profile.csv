@@ -1,0 +1,6 @@
+parameter,unit,min_val,typical_val,max_val,level,source_document,table_or_section,verification_status
+N,kg/ha,15.0,45.0,110.0,District (Indore Vertisols),ICAR-IISR Package of Practices & SHC MP State Norms,Table 1 / Malwa Zone X Soil Baseline,VERIFIED (District Level)
+P,kg/ha,15.0,50.0,85.0,District (Indore Vertisols),Soil Health Card Scheme & RVSKVV Malwa Guide,Soil Test Rating Chart (Available P2O5),VERIFIED (District Level)
+K,kg/ha,20.0,40.0,100.0,District (Indore Vertisols),RVSKVV Indore College of Agriculture Package,Malwa Vertisol Potash Index Table 3,VERIFIED (District Level)
+ph,pH scale,6.8,7.6,8.2,District (Indore Vertisols),Soil Health Card Portal & NBSS&LUP Black Soil Report,Indore District Soil Classification Map,VERIFIED (District Level)
+tehsil_soil_split,text,N/A,N/A,N/A,Tehsil Level,Department of Agriculture MP,No public tehsil-wise numerical CSV exists,NOT VERIFIED AT TEHSIL LEVEL (District Profile Used)

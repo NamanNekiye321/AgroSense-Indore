@@ -54,8 +54,12 @@ if (document.body) {
   initTheme();
 }
 
-function toggleLanguage() {
-  currentLanguage = currentLanguage === 'en' ? 'hi' : 'en';
+function applyLanguage(lang) {
+  currentLanguage = lang;
+  try {
+    localStorage.setItem('agrosense_lang', lang);
+  } catch (e) {}
+
   const langLabel = document.getElementById('lang-label');
   if (langLabel) {
     langLabel.textContent = currentLanguage === 'en' ? 'हिंदी / English' : 'English / हिंदी';
@@ -73,6 +77,28 @@ function toggleLanguage() {
     const val = currentLanguage === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-hi');
     if (val) el.innerHTML = val;
   });
+
+  document.querySelectorAll('[data-en-placeholder]').forEach((el) => {
+    const val = currentLanguage === 'en' ? el.getAttribute('data-en-placeholder') : el.getAttribute('data-hi-placeholder');
+    if (val) el.placeholder = val;
+  });
+}
+
+function toggleLanguage() {
+  applyLanguage(currentLanguage === 'en' ? 'hi' : 'en');
+}
+
+function initLanguage() {
+  try {
+    const saved = localStorage.getItem('agrosense_lang');
+    if (saved === 'hi' || saved === 'en') {
+      applyLanguage(saved);
+    }
+  } catch (e) {}
+}
+
+if (document.body) {
+  initLanguage();
 }
 
 function setActiveNav(el) {
@@ -370,6 +396,8 @@ async function handleFormSubmit(event) {
     farmer_village: villageVal,
     district:       document.getElementById('tehsil').value,
     tehsil:         document.getElementById('tehsil').value,
+    land_area:      parseFloat(document.getElementById('land-area').value) || null,
+    phone:          document.getElementById('phone')?.value.trim() || '',
     N:              parseFloat(document.getElementById('soil-n').value),
     P:              parseFloat(document.getElementById('soil-p').value),
     K:              parseFloat(document.getElementById('soil-k').value),
@@ -509,9 +537,36 @@ function displayResults(data) {
   document.getElementById('alt-2-suit').textContent = `Suitability: ${alt2.confidence}%`;
 
   // Fertilizers
+  const landAreaInput = parseFloat(document.getElementById('land-area')?.value) || 1.0;
+  const landArea = Math.max(0.1, landAreaInput);
+  const orgTonPerAcre = fert.organic_manure_ton ?? fert.organic_ton ?? 2.0;
+
+  const totalUrea = Math.round(fert.urea_kg * landArea * 10) / 10;
+  const totalDap  = Math.round(fert.dap_kg * landArea * 10) / 10;
+  const totalMop  = Math.round(fert.mop_kg * landArea * 10) / 10;
+  const totalOrg  = Math.round(orgTonPerAcre * landArea * 10) / 10;
+
   document.getElementById('res-urea').textContent = fert.urea_kg;
   document.getElementById('res-dap').textContent  = fert.dap_kg;
   document.getElementById('res-mop').textContent  = fert.mop_kg;
+  const orgEl = document.getElementById('res-org');
+  if (orgEl) orgEl.textContent = orgTonPerAcre;
+
+  const ureaTotalEl = document.getElementById('res-urea-total');
+  if (ureaTotalEl) ureaTotalEl.textContent = `Total: ${totalUrea} kg`;
+  const dapTotalEl = document.getElementById('res-dap-total');
+  if (dapTotalEl) dapTotalEl.textContent = `Total: ${totalDap} kg`;
+  const mopTotalEl = document.getElementById('res-mop-total');
+  if (mopTotalEl) mopTotalEl.textContent = `Total: ${totalMop} kg`;
+  const orgTotalEl = document.getElementById('res-org-total');
+  if (orgTotalEl) orgTotalEl.textContent = `Total: ${totalOrg} ton`;
+
+  const fertSubtitle = document.getElementById('fert-subtitle');
+  if (fertSubtitle) {
+    fertSubtitle.innerHTML = currentLanguage === 'hi'
+      ? `प्रति एकड़ दर एवं आपके <b>${landArea} एकड़</b> खेत हेतु कुल आवश्यक मात्रा`
+      : `Rate per acre &amp; total requirement calculated for your <b>${landArea} Acre</b> field`;
+  }
   
   // Format friendly, easy-to-understand application steps
   let adviceText = fert.remarks || '';
@@ -769,6 +824,16 @@ function loadConsultationIntoForm(row, trElement) {
   if (rawVill) {
     const villEl = document.getElementById('village');
     if (villEl) villEl.value = rawVill;
+  }
+  const landAreaVal = row.land_area;
+  if (landAreaVal) {
+    const areaEl = document.getElementById('land-area');
+    if (areaEl) areaEl.value = landAreaVal;
+  }
+  const phoneVal = row.contact_no || row.phone;
+  if (phoneVal) {
+    const phoneEl = document.getElementById('phone');
+    if (phoneEl) phoneEl.value = phoneVal;
   }
 
   // 5. Smooth scroll to advisor

@@ -1125,6 +1125,23 @@ body.dark .fert-amount { color: #818cf8; }
   color: var(--text-muted);
 }
 
+.fert-total-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #047857;
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  padding: 1px 6px;
+  border-radius: 999px;
+  margin: 3px 0 2px 0;
+}
+body.dark .fert-total-badge {
+  color: #34d399;
+  background-color: rgba(5, 150, 105, 0.15);
+  border-color: rgba(5, 150, 105, 0.3);
+}
+
 .fert-timing {
   font-size: 0.64rem;
   color: var(--text-muted);

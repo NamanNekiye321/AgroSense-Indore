@@ -1,0 +1,16 @@
+tehsil,season,temperature_avg_c,humidity_avg_pct,rainfall_seasonal_total_mm
+Indore,Kharif,26.69,78.71,1137.82
+Indore,Rabi,21.22,48.7,31.88
+Indore,Zaid,33.0,26.68,17.17
+Sanwer,Kharif,26.14,78.76,1109.63
+Sanwer,Rabi,20.32,48.32,30.67
+Sanwer,Zaid,32.11,26.56,19.58
+Depalpur,Kharif,26.14,78.76,1109.63
+Depalpur,Rabi,20.32,48.32,30.67
+Depalpur,Zaid,32.11,26.56,19.58
+Mhow,Kharif,26.69,78.71,1137.82
+Mhow,Rabi,21.22,48.7,31.88
+Mhow,Zaid,33.0,26.68,17.17
+Hatod,Kharif,26.14,78.76,1109.63
+Hatod,Rabi,20.32,48.32,30.67
+Hatod,Zaid,32.11,26.56,19.58

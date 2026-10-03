@@ -77,6 +77,7 @@ def calculate_fertilizer_advisory(crop_name, soil_n, soil_p, soil_k):
     Agronomic Fertilizer Gap & Commercial Dosage Algorithm (Authored by: Naman)
     Calculates exact kilograms of Urea (46% N), DAP (18% N, 46% P2O5), and MOP (60% K2O) per acre.
     """
+
     target = CROP_TARGET_NUTRIENTS.get(crop_name, {"N": 30, "P": 50, "K": 40})
     
     n_gap = max(0.0, target["N"] - soil_n)
@@ -193,6 +194,7 @@ def predict_crop_recommendation(input_params):
                 {"crop": "Maize (Corn)", "confidence": 3.8, "duration": "95 days", "season": "Kharif / Rabi", "msp_inr": 2225},
                 {"crop": "Gram (Chickpea)", "confidence": 1.4, "duration": "110 days", "season": "Rabi", "msp_inr": 5650}
             ]
+            
         elif soil_k >= 65:
             top_recommendations = [
                 {"crop": "Onion", "confidence": 91.2, "duration": "110 days", "season": "Rabi / Late Kharif", "msp_inr": 1800},

@@ -39,6 +39,9 @@
         <span class="sih-badge"><i class="fa-solid fa-seedling"></i> <span data-en="Minor Project • Malwa Plateau (Zone X)" data-hi="माइनर प्रोजेक्ट • मालवा पठार (जोन X)">Minor Project &bull; Malwa Plateau (Zone X)</span></span>
       </div>
       <div class="top-controls">
+        <button id="lang-btn" class="top-btn" onclick="toggleLanguage()" title="Switch Language / भाषा बदलें">
+          <i class="fa-solid fa-language"></i> <span id="lang-label">हिंदी / English</span>
+        </button>
         <button id="theme-btn" class="top-btn" onclick="toggleDarkMode()" title="Toggle Dark / Light Mode">
           <i class="fa-solid fa-moon"></i> <span id="theme-label">Dark Mode</span>
         </button>
@@ -69,10 +72,10 @@
       </button>
 
       <nav class="nav-links" id="main-nav">
-        <a href="#advisor" class="nav-link active" onclick="handleNavClick(this)"><i class="fa-solid fa-wand-magic-sparkles"></i> <span>Crop Advisor</span></a>
-        <a href="#advisor" class="nav-link" onclick="handleNavClick(this); setTimeout(scrollToFertilizer, 400);"><i class="fa-solid fa-flask-vial"></i> <span>Fertilizer Plan</span></a>
-        <a href="#atlas-section" class="nav-link" onclick="handleNavClick(this)"><i class="fa-solid fa-map-location-dot"></i> <span>Indore Region</span></a>
-        <a href="#history-section" class="nav-link" onclick="handleNavClick(this)"><i class="fa-solid fa-clock-rotate-left"></i> <span>History &amp; Database</span></a>
+        <a href="#advisor" class="nav-link active" onclick="handleNavClick(this)"><i class="fa-solid fa-wand-magic-sparkles"></i> <span data-en="Crop Advisor" data-hi="फसल परामर्श">Crop Advisor</span></a>
+        <a href="#advisor" class="nav-link" onclick="handleNavClick(this); setTimeout(scrollToFertilizer, 400);"><i class="fa-solid fa-flask-vial"></i> <span data-en="Fertilizer Plan" data-hi="उर्वरक योजना">Fertilizer Plan</span></a>
+        <a href="#atlas-section" class="nav-link" onclick="handleNavClick(this)"><i class="fa-solid fa-map-location-dot"></i> <span data-en="Indore Region" data-hi="इंदौर क्षेत्र">Indore Region</span></a>
+        <a href="#history-section" class="nav-link" onclick="handleNavClick(this)"><i class="fa-solid fa-clock-rotate-left"></i> <span data-en="History &amp; Database" data-hi="इतिहास एवं डेटाबेस">History &amp; Database</span></a>
       </nav>
       <!-- Mobile nav overlay -->
       <div class="nav-overlay" id="nav-overlay" onclick="toggleMobileNav()"></div>
@@ -128,8 +131,8 @@
           <i class="fa-solid fa-sliders"></i>
         </div>
         <div>
-          <h2>Soil &amp; Climate Parameters</h2>
-          <p class="card-subtitle">Enter soil test card data or auto-load regional baselines</p>
+          <h2 data-en="Soil &amp; Climate Parameters" data-hi="मृदा एवं जलवायु मापदंड">Soil &amp; Climate Parameters</h2>
+          <p class="card-subtitle" data-en="Enter soil test card data or auto-load regional baselines" data-hi="मृदा परीक्षण कार्ड डेटा दर्ज करें या क्षेत्रीय आधार मान लोड करें">Enter soil test card data or auto-load regional baselines</p>
         </div>
       </div>
 
@@ -138,7 +141,7 @@
         <!-- Row 1: Tehsil + Farmer Name -->
         <div class="form-row">
           <div class="form-group">
-            <label for="tehsil"><i class="fa-solid fa-map-pin text-indigo"></i> Select Tehsil (Indore)</label>
+            <label for="tehsil"><i class="fa-solid fa-map-pin text-indigo"></i> <span data-en="Select Tehsil (Indore)" data-hi="तहसील चुनें (इंदौर)">Select Tehsil (Indore)</span></label>
             <select id="tehsil" onchange="handleTehsilChange()">
               <option value="Sanwer" selected>Sanwer — Deep Black Cotton</option>
               <option value="Indore">Indore (Central) — Medium Deep Black</option>
@@ -148,44 +151,44 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="farmer-name"><i class="fa-solid fa-user text-indigo"></i> Farmer Name</label>
-            <input type="text" id="farmer-name" placeholder="Rameshwar Patel" required>
+            <label for="farmer-name"><i class="fa-solid fa-user text-indigo"></i> <span data-en="Farmer Name" data-hi="किसान का नाम">Farmer Name</span></label>
+            <input type="text" id="farmer-name" placeholder="Rameshwar Patel" data-en-placeholder="Rameshwar Patel" data-hi-placeholder="उदा. रामेश्वर पटेल" required>
           </div>
         </div>
 
         <!-- Row 2: Village + Land Area + Phone -->
         <div class="form-row form-row-3">
           <div class="form-group">
-            <label for="village"><i class="fa-solid fa-house text-indigo"></i> Village / Area</label>
-            <input type="text" id="village" placeholder="e.g. Limbodiya, Sanwer">
+            <label for="village"><i class="fa-solid fa-house text-indigo"></i> <span data-en="Village / Area" data-hi="गाँव / क्षेत्र">Village / Area</span></label>
+            <input type="text" id="village" placeholder="e.g. Limbodiya, Sanwer" data-en-placeholder="e.g. Limbodiya, Sanwer" data-hi-placeholder="उदा. लिंबोदिया, सांवेर">
           </div>
           <div class="form-group">
-            <label for="land-area"><i class="fa-solid fa-ruler-combined text-indigo"></i> Land Area (Acres)</label>
+            <label for="land-area"><i class="fa-solid fa-ruler-combined text-indigo"></i> <span data-en="Land Area (Acres)" data-hi="जमीन का रकबा (एकड़)">Land Area (Acres)</span></label>
             <input type="number" id="land-area" min="0.1" max="100" step="0.1" value="2.5">
           </div>
           <div class="form-group">
-            <label for="phone"><i class="fa-solid fa-phone text-indigo"></i> Phone (Optional)</label>
-            <input type="tel" id="phone" placeholder="e.g. 98XXXXXXXX">
+            <label for="phone"><i class="fa-solid fa-phone text-indigo"></i> <span data-en="Phone (Optional)" data-hi="मोबाइल नंबर (वैकल्पिक)">Phone (Optional)</span></label>
+            <input type="tel" id="phone" placeholder="e.g. 98XXXXXXXX" data-en-placeholder="e.g. 98XXXXXXXX" data-hi-placeholder="उदा. 98XXXXXXXX">
           </div>
         </div>
 
         <!-- Zone Info Strip (Sample style dashed box) -->
         <div class="zone-strip" id="zone-bar">
           <div class="zone-strip-row">
-            <span class="info-tag"><i class="fa-solid fa-layer-group"></i> Zone: <b id="zone-name">Malwa Plateau (Zone X)</b></span>
-            <span class="info-tag"><i class="fa-solid fa-mountain"></i> Soil: <b id="zone-soil">Deep Black Cotton Soil</b></span>
+            <span class="info-tag"><i class="fa-solid fa-layer-group"></i> <span data-en="Zone:" data-hi="कृषि-जोन:">Zone:</span> <b id="zone-name">Malwa Plateau (Zone X)</b></span>
+            <span class="info-tag"><i class="fa-solid fa-mountain"></i> <span data-en="Soil:" data-hi="मृदा प्रकार:">Soil:</span> <b id="zone-soil">Deep Black Cotton Soil</b></span>
           </div>
           <div class="zone-strip-row">
-            <span class="info-tag"><i class="fa-solid fa-cloud-showers-heavy"></i> Rain: <b id="zone-rain">890 mm</b></span>
+            <span class="info-tag"><i class="fa-solid fa-cloud-showers-heavy"></i> <span data-en="Rain:" data-hi="औसत वर्षा:">Rain:</span> <b id="zone-rain">890 mm</b></span>
           </div>
         </div>
 
         <!-- Quick Soil Presets -->
         <div class="preset-strip">
-          <span class="preset-label">Quick Preset:</span>
-          <button type="button" class="preset-btn" onclick="applyPreset('black_cotton')">Malwa Black Cotton</button>
-          <button type="button" class="preset-btn" onclick="applyPreset('deep_black')">Deep Black Soil</button>
-          <button type="button" class="preset-btn" onclick="applyPreset('loamy_black')">Loamy Black Soil</button>
+          <span class="preset-label" data-en="Quick Preset:" data-hi="त्वरित प्रीसेट:">Quick Preset:</span>
+          <button type="button" class="preset-btn" onclick="applyPreset('black_cotton')" data-en="Malwa Black Cotton" data-hi="मालवा काली कपास मिट्टी">Malwa Black Cotton</button>
+          <button type="button" class="preset-btn" onclick="applyPreset('deep_black')" data-en="Deep Black Soil" data-hi="गहरी काली मिट्टी">Deep Black Soil</button>
+          <button type="button" class="preset-btn" onclick="applyPreset('loamy_black')" data-en="Loamy Black Soil" data-hi="दोमट काली मिट्टी">Loamy Black Soil</button>
         </div>
 
         <!-- N, P, K, pH Nutrients 2x2 Grid -->
@@ -193,7 +196,7 @@
           <!-- Nitrogen -->
           <div class="nutrient-box">
             <div class="nutrient-head">
-              <span class="nutrient-name">Nitrogen (N)</span>
+              <span class="nutrient-name" data-en="Nitrogen (N)" data-hi="नाइट्रोजन (N)">Nitrogen (N)</span>
               <span class="nutrient-val"><span id="n-val">45</span> <small>kg/ha</small></span>
             </div>
             <input type="range" class="soil-slider" id="soil-n" min="0" max="200" value="45" oninput="updateSlider('n')">
@@ -203,7 +206,7 @@
           <!-- Phosphorus -->
           <div class="nutrient-box">
             <div class="nutrient-head">
-              <span class="nutrient-name">Phosphorus (P)</span>
+              <span class="nutrient-name" data-en="Phosphorus (P)" data-hi="फास्फोरस (P)">Phosphorus (P)</span>
               <span class="nutrient-val"><span id="p-val">50</span> <small>kg/ha</small></span>
             </div>
             <input type="range" class="soil-slider" id="soil-p" min="0" max="150" value="50" oninput="updateSlider('p')">
@@ -213,7 +216,7 @@
           <!-- Potassium -->
           <div class="nutrient-box">
             <div class="nutrient-head">
-              <span class="nutrient-name">Potassium (K)</span>
+              <span class="nutrient-name" data-en="Potassium (K)" data-hi="पोटाश (K)">Potassium (K)</span>
               <span class="nutrient-val"><span id="k-val">40</span> <small>kg/ha</small></span>
             </div>
             <input type="range" class="soil-slider" id="soil-k" min="0" max="150" value="40" oninput="updateSlider('k')">
@@ -223,7 +226,7 @@
           <!-- Soil pH -->
           <div class="nutrient-box">
             <div class="nutrient-head">
-              <span class="nutrient-name">Soil pH Level</span>
+              <span class="nutrient-name" data-en="Soil pH Level" data-hi="मृदा पीएच (pH) मान">Soil pH Level</span>
               <span class="nutrient-val"><span id="ph-val">7.6</span> <small>pH</small></span>
             </div>
             <input type="range" class="soil-slider ph-slider" id="soil-ph" min="4.0" max="10.0" step="0.1" value="7.6" oninput="updateSlider('ph')">
@@ -234,15 +237,15 @@
         <!-- Climate Conditions 3-column Grid -->
         <div class="env-grid">
           <div class="form-group">
-            <label for="temperature"><i class="fa-solid fa-temperature-half text-indigo"></i> Temperature (°C)</label>
+            <label for="temperature"><i class="fa-solid fa-temperature-half text-indigo"></i> <span data-en="Temperature (°C)" data-hi="तापमान (°C)">Temperature (°C)</span></label>
             <input type="number" id="temperature" min="5" max="50" step="0.5" value="27" required>
           </div>
           <div class="form-group">
-            <label for="humidity"><i class="fa-solid fa-droplet text-indigo"></i> Humidity (%)</label>
+            <label for="humidity"><i class="fa-solid fa-droplet text-indigo"></i> <span data-en="Humidity (%)" data-hi="आर्द्रता / नमी (%)">Humidity (%)</span></label>
             <input type="number" id="humidity" min="10" max="100" value="68" required>
           </div>
           <div class="form-group">
-            <label for="rainfall"><i class="fa-solid fa-cloud-rain text-indigo"></i> Rainfall (mm)</label>
+            <label for="rainfall"><i class="fa-solid fa-cloud-rain text-indigo"></i> <span data-en="Rainfall (mm)" data-hi="वर्षा (मिमी)">Rainfall (mm)</span></label>
             <input type="number" id="rainfall" min="100" max="2500" value="890" required>
           </div>
         </div>
@@ -250,7 +253,7 @@
         <!-- Big Tactile Predict Button -->
         <button type="submit" id="submit-btn" class="btn-predict">
           <i class="fa-solid fa-wand-magic-sparkles"></i>
-          <span>Generate AI Crop Recommendation</span>
+          <span data-en="Generate AI Crop Recommendation" data-hi="एआई फसल अनुशंसा प्राप्त करें">Generate AI Crop Recommendation</span>
         </button>
       </form>
     </section>
@@ -272,8 +275,8 @@
         <div class="empty-icon">
           <i class="fa-solid fa-wheat-awn-circle-exclamation"></i>
         </div>
-        <h4>Awaiting Soil &amp; Tehsil Parameters</h4>
-        <p>Select your Indore tehsil, adjust soil nutrient levels, and click <b>Generate AI Crop Recommendation</b> to view tailored crop and fertilizer plans.</p>
+        <h4 data-en="Awaiting Soil &amp; Tehsil Parameters" data-hi="मृदा एवं तहसील मापदंडों की प्रतीक्षा">Awaiting Soil &amp; Tehsil Parameters</h4>
+        <p data-en="Select your Indore tehsil, adjust soil nutrient levels, and click &lt;b&gt;Generate AI Crop Recommendation&lt;/b&gt; to view tailored crop and fertilizer plans." data-hi="अपनी तहसील चुनें, मिट्टी के पोषक स्तर सेट करें और &lt;b&gt;एआई फसल अनुशंसा प्राप्त करें&lt;/b&gt; पर क्लिक करें।">Select your Indore tehsil, adjust soil nutrient levels, and click <b>Generate AI Crop Recommendation</b> to view tailored crop and fertilizer plans.</p>
       </div>
 
       <!-- Populated Results Container -->
@@ -287,7 +290,7 @@
                 <i class="fa-solid fa-seedling"></i>
               </div>
               <div>
-                <div class="rec-tag">TOP RECOMMENDATION #1</div>
+                <div class="rec-tag" data-en="TOP RECOMMENDATION #1" data-hi="सर्वश्रेष्ठ फसल अनुशंसा #1">TOP RECOMMENDATION #1</div>
                 <h2 class="crop-title" id="res-crop-name">Soybean</h2>
                 <p class="crop-subtitle" id="res-crop-meta">सोयाबीन (Kharif Season)</p>
               </div>
@@ -296,7 +299,7 @@
             <!-- Radial Confidence Score Ring -->
             <div class="confidence-ring">
               <div class="conf-value" id="res-confidence-pill">94.2%</div>
-              <div class="conf-label">SUITABILITY<br>SCORE</div>
+              <div class="conf-label" data-en="SUITABILITY&lt;br&gt;SCORE" data-hi="अनुकूलता&lt;br&gt;स्कोर">SUITABILITY<br>SCORE</div>
             </div>
           </div>
 
@@ -305,28 +308,28 @@
             <div class="spec-item">
               <i class="fa-solid fa-hourglass-half"></i>
               <div>
-                <span class="spec-label">Duration</span>
+                <span class="spec-label" data-en="Duration" data-hi="अवधि">Duration</span>
                 <b id="stat-duration">95–105 Days</b>
               </div>
             </div>
             <div class="spec-item">
               <i class="fa-solid fa-sun-plant-wilt"></i>
               <div>
-                <span class="spec-label">Season</span>
+                <span class="spec-label" data-en="Season" data-hi="मौसम (सीजन)">Season</span>
                 <b id="stat-season">Kharif / Rabi</b>
               </div>
             </div>
             <div class="spec-item">
               <i class="fa-solid fa-indian-rupee-sign"></i>
               <div>
-                <span class="spec-label">Govt MSP</span>
+                <span class="spec-label" data-en="Govt MSP" data-hi="सरकारी समर्थन मूल्य">Govt MSP</span>
                 <b id="stat-msp">₹4,892 / Q</b>
               </div>
             </div>
             <div class="spec-item">
               <i class="fa-solid fa-faucet-drip"></i>
               <div>
-                <span class="spec-label">Water Req.</span>
+                <span class="spec-label" data-en="Water Req." data-hi="जल आवश्यकता">Water Req.</span>
                 <b id="stat-water">Moderate</b>
               </div>
             </div>
@@ -334,7 +337,7 @@
         </div>
 
         <!-- Alternative Crops Section -->
-        <h4 class="section-mini-heading">Alternative Crop Options</h4>
+        <h4 class="section-mini-heading" data-en="Alternative Crop Options" data-hi="अन्य वैकल्पिक फसलें">Alternative Crop Options</h4>
         <div class="alt-crops-grid">
           <div class="alt-crop-card">
             <div class="alt-rank">#2</div>
@@ -360,8 +363,8 @@
           <div class="fert-head">
             <i class="fa-solid fa-prescription-bottle-medical"></i>
             <div>
-              <h4>Precision Fertilizer Advisory</h4>
-              <p>Dosage calculated based on soil nutrient deficit for 1 Acre</p>
+              <h4 data-en="Precision Fertilizer Advisory" data-hi="सटीक उर्वरक परामर्श (खाद योजना)">Precision Fertilizer Advisory</h4>
+              <p id="fert-subtitle" data-en="Dosage calculated based on soil nutrient deficit for 1 Acre" data-hi="1 एकड़ के लिए मिट्टी की पोषक आवश्यकता के आधार पर गणना की गई खुराक">Dosage calculated based on soil nutrient deficit for 1 Acre</p>
             </div>
           </div>
 
@@ -369,24 +372,28 @@
             <div class="fert-dose-box urea">
               <span class="fert-name">Urea (46% N)</span>
               <span class="fert-amount"><span id="res-urea">15</span> <small>kg/acre</small></span>
+              <span class="fert-total-badge" id="res-urea-total">Total: 37.5 kg</span>
               <span class="fert-timing">Split: 50% Basal + 50% Top</span>
             </div>
 
             <div class="fert-dose-box dap">
               <span class="fert-name">DAP (18:46:0)</span>
               <span class="fert-amount"><span id="res-dap">10</span> <small>kg/acre</small></span>
+              <span class="fert-total-badge" id="res-dap-total">Total: 25 kg</span>
               <span class="fert-timing">100% Basal at Sowing</span>
             </div>
 
             <div class="fert-dose-box mop">
               <span class="fert-name">MOP (60% K)</span>
               <span class="fert-amount"><span id="res-mop">10</span> <small>kg/acre</small></span>
+              <span class="fert-total-badge" id="res-mop-total">Total: 25 kg</span>
               <span class="fert-timing">Basal Dose</span>
             </div>
 
             <div class="fert-dose-box organic">
               <span class="fert-name">Organic Compost</span>
-              <span class="fert-amount">2.0 <small>ton/acre</small></span>
+              <span class="fert-amount"><span id="res-org">2.0</span> <small>ton/acre</small></span>
+              <span class="fert-total-badge" id="res-org-total">Total: 5.0 tons</span>
               <span class="fert-timing">Soil Incorporation</span>
             </div>
           </div>

@@ -1,0 +1,7 @@
+crop,primary_season,n_demand,p_demand,k_demand,ph_min,ph_max,min_rain_mm,max_rain_mm,min_temp_c,max_temp_c,source_reference
+Soybean,Kharif,Low (15-35),High (45-75),Moderate (30-55),6.8,8.0,650,1200,22,35,ICAR-IISR Indore Table-1 (25:60:40 NPKS)
+Maize (Corn),Kharif,High (65-115),Moderate (35-65),Moderate (30-55),6.5,7.8,500,1000,20,34,Directorate of Agriculture MP Maize Guide
+Wheat,Rabi,High (80-130),Moderate (40-65),Moderate (25-50),7.0,8.2,200,550,12,25,RVSKVV Malwa Sharbati Wheat Package
+Gram (Chickpea),Rabi,Low (15-32),Moderate (40-65),Moderate (20-45),7.0,8.2,200,550,12,28,RVSKVV College of Agriculture Indore Chana Manual
+Onion,Rabi,High (70-115),Moderate (35-65),High (55-105),6.8,8.0,300,750,14,30,NHRDF Onion Package of Practices (Malwa)
+Potato,Rabi,High (85-135),High (50-85),High (65-115),6.2,7.6,300,650,14,25,CPRI & RVSKVV Potato Production Guide Indore

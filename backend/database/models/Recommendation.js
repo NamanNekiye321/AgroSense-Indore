@@ -37,6 +37,8 @@ const RecommendationSchema = new mongoose.Schema({
   farmer_village: { type: String, default: '' },
   village:        { type: String, default: '' },
   tehsil:         { type: String, default: 'Indore' },
+  land_area:      { type: Number, default: null },             // Farmer's land size in acres
+  contact_no:     { type: String, default: '' },               // Optional phone number
 
   // Embedded soil snapshot at time of recommendation
   soil_inputs: { type: SoilInputSchema, required: true },

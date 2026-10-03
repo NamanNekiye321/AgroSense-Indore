@@ -1,0 +1,21 @@
+column_name,data_type,origin_type,source_authority,description
+district,string,FIXED,District Administration,Always "Indore" (District of study)
+tehsil,string,CATEGORICAL,MP Revenue Dept,One of the 5 administrative tehsils: Indore, Sanwer, Depalpur, Mhow, Hatod
+season,string,CATEGORICAL,IMD / Agronomy Standards,Agricultural cropping season: "Kharif" (Monsoon) or "Rabi" (Winter)
+N,float,GENERATED (Empirical Profile),Soil Health Card Scheme & ICAR-IISR,Available Nitrogen in soil (kg/ha), sampled from Indore Vertisols baseline (15-110 kg/ha)
+P,float,GENERATED (Empirical Profile),Soil Health Card Scheme & RVSKVV,Available Phosphorus in soil (kg/ha), sampled from Indore Vertisols baseline (15-85 kg/ha)
+K,float,GENERATED (Empirical Profile),RVSKVV Indore College of Agriculture,Available Potassium in soil (kg/ha), sampled from Indore Vertisols baseline (20-100 kg/ha)
+ph,float,GENERATED (Empirical Profile),Soil Health Card Portal,Soil pH value, sampled from Indore black soil range (6.8 to 8.2)
+temperature,float,REAL (NASA POWER) + VARIANCE,NASA POWER Satellite API,Seasonal average ambient temperature (°C) for tehsil with small sensor variation (+/- 1.2°C)
+humidity,float,REAL (NASA POWER) + VARIANCE,NASA POWER Satellite API,Seasonal relative humidity (%) for tehsil with small sensor variation (+/- 3%)
+rainfall,float,REAL (NASA POWER) + VARIANCE,NASA POWER Satellite API,Seasonal cumulative rainfall (mm) for tehsil with natural weather variance
+crop,string,RULE-BASED (Agronomic Logic),ICAR-IISR & RVSKVV Package of Practices,Target crop label assigned via agronomic suitability rules (Season + NPK + pH)
+
+
+
+
+
+
+
+
+

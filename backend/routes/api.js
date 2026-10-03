@@ -17,7 +17,7 @@ const CROP_TARGETS = {
 // POST /api/recommend
 router.post('/recommend', async (req, res) => {
   try {
-    const { N, P, K, ph, rainfall, temperature, humidity, tehsil, farmerName, farmer_name, village, farmer_village } = req.body;
+    const { N, P, K, ph, rainfall, temperature, humidity, tehsil, farmerName, farmer_name, village, farmer_village, land_area, phone } = req.body;
 
     // Validation
     if (N === undefined || P === undefined || K === undefined || ph === undefined) {
@@ -68,6 +68,8 @@ router.post('/recommend', async (req, res) => {
       farmer_village: finalVillage,
       village: finalVillage,
       tehsil: tehsil || 'Indore',
+      land_area: parseFloat(land_area) || null,
+      contact_no: phone || '',
       soil_inputs: {
         N: soilN,
         P: soilP,
