@@ -4,6 +4,7 @@
  */
 
 // ---- THEME & LANGUAGE CONTROLLERS ----
+
 let currentLanguage = 'en';
 
 function applyTheme(isDark) {

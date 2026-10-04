@@ -1,0 +1,650 @@
+row_crop,candidates,n_candidates
+Potato,"Onion, Potato, Wheat",3
+Onion,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Onion,"Onion, Potato",2
+Potato,"Onion, Potato",2
+Soybean,"Maize (Corn), Soybean",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Wheat,"Onion, Wheat",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Onion,"Onion, Potato",2
+Potato,"Onion, Potato",2
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Potato, Wheat",3
+Wheat,"Onion, Wheat",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Wheat,"Onion, Wheat",2
+Onion,"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Soybean,"Maize (Corn), Soybean",2
+Onion,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Maize (Corn),"Maize (Corn), Soybean",2
+Onion,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato, Wheat",3
+Onion,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Onion,"Onion, Potato",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Onion,"Gram (Chickpea), Onion, Potato",3
+Onion,"Gram (Chickpea), Onion",2
+Onion,"Onion, Wheat",2
+Soybean,"Maize (Corn), Soybean",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Wheat,"Onion, Potato, Wheat",3
+Wheat,"Onion, Wheat",2
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Wheat,"Onion, Wheat",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Wheat,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato",2
+Wheat,"Onion, Wheat",2
+Onion,"Onion, Potato",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Onion,"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Potato, Wheat",3
+Onion,"Onion, Potato, Wheat",3
+Wheat,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Wheat,"Onion, Wheat",2
+Onion,"Onion, Potato",2
+Potato,"Onion, Potato, Wheat",3
+Wheat,"Onion, Wheat",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Onion,"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Wheat,"Onion, Wheat",2
+Onion,"Onion, Potato, Wheat",3
+Onion,"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Wheat",2
+Soybean,"Maize (Corn), Soybean",2
+Wheat,"Onion, Potato, Wheat",3
+Onion,"Gram (Chickpea), Onion",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Wheat,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Wheat,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato",2
+Onion,"Onion, Wheat",2
+Maize (Corn),"Maize (Corn), Soybean",2
+Wheat,"Onion, Wheat",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Onion,"Onion, Wheat",2
+Onion,"Onion, Wheat",2
+Onion,"Gram (Chickpea), Onion",2
+Wheat,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Wheat,"Onion, Wheat",2
+Onion,"Gram (Chickpea), Onion",2
+Wheat,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Wheat,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Wheat,"Onion, Wheat",2
+Potato,"Onion, Potato",2
+Onion,"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Maize (Corn),"Maize (Corn), Soybean",2
+Onion,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Wheat,"Onion, Wheat",2
+Maize (Corn),"Maize (Corn), Soybean",2
+Wheat,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato",2
+Onion,"Onion, Potato",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Wheat,"Onion, Wheat",2
+Wheat,"Onion, Wheat",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Onion,"Onion, Wheat",2
+Onion,"Onion, Potato",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Wheat,"Onion, Potato, Wheat",3
+Wheat,"Onion, Potato, Wheat",3
+Wheat,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato",2
+Onion,"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Wheat,"Onion, Potato, Wheat",3
+Wheat,"Onion, Wheat",2
+Wheat,"Onion, Wheat",2
+Potato,"Onion, Potato, Wheat",3
+Onion,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Maize (Corn),"Maize (Corn), Soybean",2
+Wheat,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato",2
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Soybean,"Maize (Corn), Soybean",2
+Wheat,"Onion, Wheat",2
+Wheat,"Onion, Wheat",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Onion,"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Potato, Wheat",3
+Onion,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Onion,"Gram (Chickpea), Onion",2
+Maize (Corn),"Maize (Corn), Soybean",2
+Wheat,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Onion,"Gram (Chickpea), Onion",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato, Wheat",3
+Maize (Corn),"Maize (Corn), Soybean",2
+Onion,"Onion, Potato",2
+Onion,"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Onion,"Gram (Chickpea), Onion, Potato",3
+Maize (Corn),"Maize (Corn), Soybean",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Onion,"Onion, Potato, Wheat",3
+Wheat,"Onion, Wheat",2
+Potato,"Onion, Potato, Wheat",3
+Wheat,"Onion, Wheat",2
+Wheat,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Onion,"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Onion,"Onion, Potato",2
+Potato,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Wheat,"Onion, Wheat",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Wheat",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Wheat,"Onion, Wheat",2
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Onion,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato",2
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Onion,"Onion, Potato",2
+Potato,"Onion, Potato, Wheat",3
+Onion,"Gram (Chickpea), Onion",2
+Soybean,"Maize (Corn), Soybean",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato",2
+Wheat,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Wheat,"Onion, Wheat",2
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Onion,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Onion,"Onion, Wheat",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Wheat,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Wheat,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Onion,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Wheat,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Onion,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Wheat,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Onion,"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Potato",2
+Wheat,"Onion, Wheat",2
+Maize (Corn),"Maize (Corn), Soybean",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Wheat,"Onion, Wheat",2
+Potato,"Onion, Potato",2
+Onion,"Onion, Potato, Wheat",3
+Onion,"Onion, Potato, Wheat",3
+Onion,"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Wheat,"Onion, Potato, Wheat",3
+Maize (Corn),"Maize (Corn), Soybean",2
+Soybean,"Maize (Corn), Soybean",2
+Soybean,"Maize (Corn), Soybean",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Onion,"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Onion,"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato",2
+Onion,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato",2
+Onion,"Onion, Wheat",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Wheat,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Onion,"Gram (Chickpea), Onion, Potato",3
+Onion,"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato, Wheat",3
+Wheat,"Onion, Wheat",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato",2
+Wheat,"Onion, Wheat",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Wheat,"Onion, Wheat",2
+Maize (Corn),"Maize (Corn), Soybean",2
+Potato,"Onion, Potato",2
+Wheat,"Onion, Wheat",2
+Onion,"Onion, Potato",2
+Wheat,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Onion,"Onion, Potato",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Wheat,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato",2
+Wheat,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Potato, Wheat",3
+Onion,"Onion, Potato, Wheat",3
+Wheat,"Onion, Potato, Wheat",3
+Onion,"Onion, Potato, Wheat",3
+Wheat,"Onion, Wheat",2
+Maize (Corn),"Maize (Corn), Soybean",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Onion,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Wheat,"Onion, Potato, Wheat",3
+Onion,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato",2
+Maize (Corn),"Maize (Corn), Soybean",2
+Onion,"Gram (Chickpea), Onion, Potato",3
+Wheat,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato",2
+Wheat,"Onion, Wheat",2
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato, Wheat",3
+Onion,"Onion, Wheat",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato",2
+Wheat,"Onion, Potato, Wheat",3
+Wheat,"Onion, Potato, Wheat",3
+Onion,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato",2
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Potato",2
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato",2
+Wheat,"Onion, Potato, Wheat",3
+Maize (Corn),"Maize (Corn), Soybean",2
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Onion,"Gram (Chickpea), Onion",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Onion,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Wheat,"Onion, Potato, Wheat",3
+Onion,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato, Wheat",3
+Onion,"Onion, Potato, Wheat",3
+Onion,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Wheat,"Onion, Wheat",2
+Onion,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Wheat,"Onion, Potato, Wheat",3
+Onion,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Wheat,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Wheat,"Onion, Wheat",2
+Onion,"Onion, Wheat",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato",2
+Wheat,"Onion, Potato, Wheat",3
+Maize (Corn),"Maize (Corn), Soybean",2
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Wheat",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Wheat",2
+Onion,"Onion, Wheat",2
+Wheat,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Wheat,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Maize (Corn),"Maize (Corn), Soybean",2
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Onion,"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Soybean,"Maize (Corn), Soybean",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Soybean,"Maize (Corn), Soybean",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Potato, Wheat",3
+Onion,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Potato",2
+Onion,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Onion,"Onion, Wheat",2
+Wheat,"Onion, Wheat",2
+Wheat,"Onion, Wheat",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Wheat,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Onion,"Onion, Potato",2
+Soybean,"Maize (Corn), Soybean",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Maize (Corn),"Maize (Corn), Soybean",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato",2
+Wheat,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Maize (Corn),"Maize (Corn), Soybean",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato, Wheat",3
+Wheat,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Wheat,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Wheat,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Onion,"Onion, Potato, Wheat",3
+Onion,"Onion, Wheat",2
+Onion,"Gram (Chickpea), Onion, Potato",3
+Onion,"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Wheat,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Wheat,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Wheat,"Onion, Wheat",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Onion,"Gram (Chickpea), Onion",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Wheat,"Onion, Wheat",2
+Wheat,"Onion, Wheat",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Onion,"Onion, Wheat",2
+Soybean,"Maize (Corn), Soybean",2
+Potato,"Onion, Potato",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Wheat,"Onion, Wheat",2
+Potato,"Onion, Potato, Wheat",3
+Soybean,"Maize (Corn), Soybean",2
+Onion,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Onion,"Onion, Potato",2
+Soybean,"Maize (Corn), Soybean",2
+Onion,"Onion, Potato, Wheat",3
+Maize (Corn),"Maize (Corn), Soybean",2
+Potato,"Onion, Potato",2
+Onion,"Onion, Wheat",2
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Onion,"Onion, Potato, Wheat",3
+Onion,"Gram (Chickpea), Onion, Potato",3
+Soybean,"Maize (Corn), Soybean",2
+Soybean,"Maize (Corn), Soybean",2
+Onion,"Onion, Potato, Wheat",3
+Wheat,"Onion, Wheat",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Wheat,"Onion, Wheat",2
+Onion,"Onion, Potato",2
+Maize (Corn),"Maize (Corn), Soybean",2
+Onion,"Onion, Potato",2
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Onion,"Onion, Potato",2
+Wheat,"Onion, Wheat",2
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato, Wheat",3
+Wheat,"Onion, Wheat",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato",2
+Onion,"Gram (Chickpea), Onion",2
+Onion,"Onion, Potato, Wheat",3
+Wheat,"Onion, Wheat",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Onion,"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion",2
+Potato,"Onion, Potato, Wheat",3
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato",2
+Potato,"Onion, Potato, Wheat",3
+Potato,"Onion, Potato, Wheat",3
+Onion,"Onion, Wheat",2
+Wheat,"Onion, Wheat",2
+Wheat,"Onion, Potato, Wheat",3
+Wheat,"Onion, Wheat",2
+Gram (Chickpea),"Gram (Chickpea), Onion, Potato",3
+Potato,"Onion, Potato, Wheat",3

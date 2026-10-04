@@ -1,0 +1,28 @@
+PART D — Integration Guide (NO changes applied — awaiting approval)
+======================================================================
+Best candidate from Part C: see partC_improvements.csv (highest Test Acc %)
+
+Files to change (with your approval):
+  1. backend/ml_service/predictor_service.py  line ~31
+       Change INDORE_MODEL_PATH to point to:
+       research_experiments/models/rf_tuned.pkl   OR   gradient_boosting.pkl
+
+  2. IMPORTANT — format mismatch:
+       Current pkl = dict {model, features, classes, model_name, ...}
+       New pkls    = raw sklearn estimator
+       predictor_service.py line ~153 does: model = pkg["model"]  → WILL FAIL
+       Fix needed: wrap new model in dict, OR update the load logic.
+
+  3. If using rf_with_ratios.pkl:
+       predictor_service.py build_features must also add N/P, N/K, P/K ratios.
+       This is a larger change — ask before doing it.
+
+What will NOT break automatically:
+  - predict_proba() — all models support it
+  - model.classes_  — all sklearn classifiers have it
+  - top-3 display   — relies only on predict_proba output
+
+Safe test sequence (after approval):
+  a) cp research_experiments/models/rf_tuned.pkl models/indore_crop_model_v2.pkl
+  b) python3 backend/ml_service/predictor_service.py  (pipe test JSON)
+  c) Start backend, do one manual test from UI, check result + DB save.

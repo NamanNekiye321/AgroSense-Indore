@@ -1,0 +1,5 @@
+Experiment,CV Mean %,CV Std %,Test Acc %,Top-3 Acc %,Delta vs Base
+"Baseline RF (n=200, depth=14)",82.92,0.91,79.67,100.0,0.0
+"Tuned RF {'max_depth': 14, 'min_samples_split': 5, 'n_estimators': 300}",83.17,1.22,81.0,100.0,1.33
+"Gradient Boosting (n=150,lr=0.1,depth=4)",80.0,1.09,80.67,99.67,1.0
+RF + Nutrient Ratio Features,81.58,1.93,79.33,100.0,-0.33
